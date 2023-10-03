@@ -28,15 +28,9 @@ const styles = StyleSheet.create(
             alignItems: 'center',
             justifyContent: 'center',
             padding: 24,
-<<<<<<< HEAD
             backgroundColor: 'dimgrey',
           },
           paragraph: {
-=======
-            backgroundColor: 'gray',
-        },
-        paragraph: {
->>>>>>> 4cfde2f133c2404d7d838914075f9d9d4cf81fdf
             margin: 12,
             fontSize: 20,
             fontWeight: 'bold',
