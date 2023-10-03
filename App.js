@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./screens/Home"
 import Profile from "./screens/Profile";
 import Question from "./screens/Question";
+import QueryHistory from "./screens/QueryHistory";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +26,10 @@ export default function App() {
         <Tab.Screen name="Profile" component={Profile}
         options={{
           headerShown: false
+        }}/>
+        <Tab.Screen name="QueryHistory" component={QueryHistory} 
+        options={{
+          headerShown: false,
         }}/>
       </Tab.Navigator>
     </NavigationContainer>
