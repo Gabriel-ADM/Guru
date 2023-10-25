@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, VirtualizedList, FlatList } from "react-native";
-import OldChats from "../components/OldChats";
+import OldChats from "../../components/OldChats";
 
 const getOldChats = (_data, index) => ({
   id: index,
@@ -32,31 +32,6 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create(
-<<<<<<< HEAD
-    {
-        container: {
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: 24,
-            backgroundColor: 'dimgrey',  
-          },
-          paragraph: {
-            margin: 12,
-            marginTop: 0,
-            fontSize: 20,
-            fontWeight: 'bold',
-            textAlign: 'center',
-            color: 'white'
-          },
-            input: {
-            height: 40,
-            margin: 12,
-            borderWidth: 1,
-            padding: 10,
-            color: 'white'
-          },
-    }
-=======
   {
     container: {
       alignItems: 'center',
@@ -87,5 +62,5 @@ const styles = StyleSheet.create(
       color: 'white'
     },
   }
->>>>>>> 4cfde2f133c2404d7d838914075f9d9d4cf81fdf
+
 );
