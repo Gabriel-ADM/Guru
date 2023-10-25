@@ -2,11 +2,12 @@ import React from "react";
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Screens
 import Home from "./screens/Home"
 import Profile from "./screens/Profile";
-import Question from "./screens/Question";
+import RegisterClaim from "./screens/RegisterClaim";
 import QueryHistory from "./screens/QueryHistory";
 
 const Tab = createBottomTabNavigator();
@@ -14,23 +15,31 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} 
-        options={{
-          headerShown: false
-        }}/>
-        <Tab.Screen name="Question" component={Question}
-        options={{
-          headerShown: false
-        }}/>
-        <Tab.Screen name="Profile" component={Profile}
-        options={{
-          headerShown: false
-        }}/>
-        <Tab.Screen name="QueryHistory" component={QueryHistory} 
-        options={{
-          headerShown: false,
-        }}/>
+      <Tab.Navigator
+      initialRouteName="Registrar Sinistro"
+        activeColor="#f0edf6"
+        inactiveColor="#3e2465">
+        <Tab.Screen name="Início" component={Home}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="home" color={color} size={26} />
+            ),
+          }} />
+        <Tab.Screen name="Registrar Sinistro" component={RegisterClaim}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="card-plus" color={color} size={26} />
+            ),
+          }} />
+        <Tab.Screen name="Perfil" component={Profile}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="face-recognition" color={color} size={26} />
+            ),
+          }} />
       </Tab.Navigator>
     </NavigationContainer>
   )
