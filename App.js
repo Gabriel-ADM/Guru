@@ -7,8 +7,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 // Screens
 import Home from "./screens/Home"
 import Profile from "./screens/Profile";
-import RegisterClaim from "./screens/RegisterClaim";
 import QueryHistory from "./screens/QueryHistory";
+import RegisterClaim from "./screens/RegisterClaim";
+import HealthCheck from "./components/ClaimQuestions/HealthCheck";
 
 const Tab = createBottomTabNavigator();
 
