@@ -1,33 +1,18 @@
 import { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
-import StackRoutes from "../routes/stack.routes";
+import { View, Text, StyleSheet } from "react-native";
+import 'react-native-gesture-handler';
+import TowTruck from "./TowTruck";
+import { createStackNavigator } from '@react-navigation/stack';
 
+const Stack = createStackNavigator();
 
 export default function TowTruckOne() {
-    const [input, setInput] = useState("");
 
     return (
-        <View style={styles.header}>
-            <Text style={styles.paragraph}>Local da ocorrência</Text>
-            <View style={styles.container}>
-            <TextInput
-                onChangeText={setInput}
-                value={input}
-                placeholder="Nos envie a sua localização atual!"
-                style={styles.input}
-                multiline={true}
-                rows={10}
-            />
-            <Pressable style={({pressed}) => [
-                {
-                    backgroundColor: pressed ? 'red' : 'blue',
-                },
-                styles.button,
-            ]}onPress={() => <StackRoutes />}>
-                <Text style={styles.paragraph}>Localizar no mapa</Text>
-            </Pressable>
-            </View>
-            </View>
+        <Stack.Navigator>
+            <Stack.Screen name="Guincho" component={TowTruckOne} />
+            <Stack.Screen name="Enviar localização" component={TowTruck} />
+        </Stack.Navigator>
     );
 }
 

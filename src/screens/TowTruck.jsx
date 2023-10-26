@@ -1,16 +1,57 @@
-/*import { useEffect, useState, useRef } from "react";
-import MapView, { Marker } from 'react-native-maps';
-import { StyleSheet, View } from "react-native";
-import {
+import { useState } from "react";
+import { StyleSheet, View, Pressable, Text } from "react-native";
+import React from 'react';
+
+
+export default function TowTruck({ navigation }) {
+
+    const [input, setInput] = useState("");
+
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}>MAPA</Text>
+                <Pressable style={styles.button}>
+                /* 
+           {   
+               /* location && 
+                <MapView
+                ref = {MapRef}
+                style={styles.map}
+                initialRegion={{
+                    latitude: location.coords.latitude,
+                    longitude: location.coords.longitude,
+                    latitudeDelta: 0.005,
+                    longitudeDelta: 0.005
+                }}
+             >
+                <Marker 
+                    coordinate={{
+                        latitude: location.coords.latitude,
+                        longitude: location.coords.longitude,
+                    }}
+                />
+             </MapView>   
+            
+           }      
+            
+        </View> */ }
+                </Pressable>
+            </View>
+    );
+} 
+
+
+
+/*import {
     requestForegroundPermissionsAsync,
     getCurrentPositionAsync,
     LocationObject,
     watchPositionAsync
-} from 'expo-location';
+} from 'expo-location';*/
 
 
-export default function TowTruck() {
-    const [location, setLocation] = useState<LocationObject | null>(null);
+/*export default function TowTruck() {
+    /*const [location, setLocation] = useState<LocationObject | null>(null);
 
 
     const mapRef = useRef<MapView>(null);
@@ -42,12 +83,12 @@ export default function TowTruck() {
                 center: response.coords
             })
         });
-    }, []);
+    }, []); */
 
-    return (
-        <View style={styles.container}>
+    /*return (
+        /*<View style={styles.container}>
            {
-                location && 
+               /* location && 
                 <MapView
                 ref = {MapRef}
                 style={styles.map}
@@ -66,12 +107,9 @@ export default function TowTruck() {
                 />
              </MapView>   
             
-           }     
+           }      
             
-        </View>
-        );
-    }
-
+        </View> */
 
   
 
@@ -98,5 +136,14 @@ const styles = StyleSheet.create({
     map: {
         flex: 1,
         width: '100%',
-    }
-}); */
+    },
+    questionBox: {
+        marginTop: 50,
+    },
+    button: {
+        marginTop: 50,
+        padding: 10,
+        borderWidth: 1,
+        borderRadius: "5px",
+    },
+});

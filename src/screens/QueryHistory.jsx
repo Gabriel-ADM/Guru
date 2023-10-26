@@ -1,5 +1,7 @@
-import { View, Text, StyleSheet } from "react-native";
+/*import { View, Text, StyleSheet } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import React from "react";
+
 
 export default function QueryHistory(){
     return (
@@ -10,8 +12,7 @@ export default function QueryHistory(){
     )
 }
 
-const styles = StyleSheet.create(
-    {
+const styles = StyleSheet.create({
         container: {
             alignItems: 'center',
             justifyContent: 'center',
@@ -29,5 +30,4 @@ const styles = StyleSheet.create(
         icon: {
             color: 'white'
         }
-    }
-);
+}); */
