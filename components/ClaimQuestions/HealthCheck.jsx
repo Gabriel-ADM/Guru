@@ -24,7 +24,7 @@ export default function HealthCheck({ navigation }) {
                     <Text style={styles.title}>SIM</Text>
                     <Text style={styles.paragraphGood}>Todo mundo está bem!</Text>
                 </Pressable>
-                <Pressable style={styles.button}>
+                <Pressable style={styles.button} onPress={() => navigation.push("Tipo de Sinistro")}>
                     <Text style={styles.title}>NÃO</Text>
                     <Text style={styles.paragraphBad}>Alguém está ferido!</Text>
                 </Pressable>

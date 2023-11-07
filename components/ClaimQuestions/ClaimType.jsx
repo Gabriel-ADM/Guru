@@ -11,23 +11,24 @@ export default function ClaimType({ navigation }) {
                 source={"https://reactnative.dev/img/tiny_logo.png"}
             />
             <View style={styles.questionBox}>
-                <Text style={styles.title}>Está todo mundo bem?</Text>
-                {/* <TextInput
-                    onChangeText={setInput}
-                    value={input}
-                    placeholder="Descreva sua situação!"
-                    style={styles.input}
-                    multiline={true}
-                    rows={10}
-                /> */}
-                <Pressable style={styles.button}>
-                    <Text style={styles.title}>CARRO</Text>
-                    <Text style={styles.paragraphGood}>Todo mundo está bem!</Text>
+                <Text style={styles.title}>Qual o tipo de ocorrido?</Text>
+                <Pressable style={styles.button} onPress={() => navigation.push("Registro Fotografico")}>
+                    <Text style={styles.title}>COLISÃO DIANTEIRA</Text>
+                    <Text style={styles.paragraphGood}>Veículo assegurado colidiu pela frente</Text>
                 </Pressable>
-                <Pressable style={styles.button}>
-                    <Text style={styles.title}>SAÚDE</Text>
-                    <Text style={styles.paragraphBad}>Alguém está ferido!</Text>
+                <Pressable style={styles.button} onPress={() => navigation.push("Registro Fotografico")}>
+                    <Text style={styles.title}>COLISÃO TRASEIRA</Text>
+                    <Text style={styles.paragraphGood}>Colidiram na traseira do veículo assegurado</Text>
                 </Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.push("Registro Fotografico")}>
+                    <Text style={styles.title}>COLISÃO LATERAL</Text>
+                    <Text style={styles.paragraphGood}>Colidiram na lateral do veículo assegurado</Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.push("Registro Fotografico")}>
+                    <Text style={styles.title}>ENGAVETAMENTO</Text>
+                    <Text style={styles.paragraphGood}>Mais de dois veículos se chocaram</Text>
+                </Pressable>
+
             </View>
         </View>
     )
@@ -42,14 +43,14 @@ const styles = StyleSheet.create(
             backgroundColor: 'lightergrey',
         },
         title: {
-            marginTop: 12,
-            fontSize: 20,
+            marginTop: 8,
+            fontSize: 18,
             fontWeight: 'bolder',
             textAlign: 'center',
             color: '#35014c'
         },
         paragraphGood: {
-            margin: 12,
+            margin: 10,
             fontSize: 13,
             fontWeight: 'bold',
             textAlign: 'center',
